@@ -2,10 +2,10 @@
   <nav id="navbar">
     <div class="navbar-content">
       <div class="navbar-left">
-        <span v-if="userStore.name">{{ userStore.name }}</span>
+        <span>Harrow Quiz </span>
       </div>
       <div class="navbar-right">
-        <span>Harrow Quiz </span>
+        <span v-if="userStore.firstName">{{ userStore.firstName }}</span>
       </div>
     </div>
   </nav>

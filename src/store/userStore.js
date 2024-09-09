@@ -2,14 +2,16 @@ import { defineStore } from "pinia";
 
 export const useUserStore = defineStore("userStore", {
   state: () => ({
-    name: "",
+    firstName: "",
+    secondName: "",
     form: "",
     house: "",
     score: 0,
   }),
   actions: {
-    setUserDetails(name, form, house) {
-      this.name = name;
+    setUserDetails(firstName, secondName, form, house) {
+      this.firstName = firstName;
+      this.secondName = secondName;
       this.form = form;
       this.house = house;
     },
@@ -19,14 +21,12 @@ export const useUserStore = defineStore("userStore", {
     resetScore() {
       this.score = 0;
     },
-    resetUserDetails() {
-      this.name = "";
-      this.form = "";
-      this.house = "";
-    },
     resetAll() {
       this.resetScore();
-      this.resetUserDetails();
+      this.firstName = "";
+      this.secondName = "";
+      this.form = "";
+      this.house = "";
     },
   },
 });

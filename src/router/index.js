@@ -29,7 +29,7 @@ const router = createRouter({
 
 router.beforeEach((to, from, next) => {
   const userStore = useUserStore();
-  if (to.path !== "/" && !userStore.name) {
+  if (to.path !== "/" && !userStore.firstName) {
     userStore.resetAll();
     next({ name: "WelcomePage" });
   } else {

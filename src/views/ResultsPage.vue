@@ -3,7 +3,10 @@
     <h1>Quiz Results</h1>
 
     <div class="result-details">
-      <p><strong>Name:</strong> {{ userStore.name }}</p>
+      <p>
+        <strong>Name:</strong> {{ userStore.firstName }}
+        {{ userStore.secondName }}
+      </p>
       <p><strong>Form:</strong> {{ userStore.form }}</p>
       <p><strong>House:</strong> {{ userStore.house }}</p>
       <p>

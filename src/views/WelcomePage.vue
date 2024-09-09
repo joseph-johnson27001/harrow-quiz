@@ -4,8 +4,13 @@
 
     <form @submit.prevent="submitForm">
       <div class="input-group">
-        <label for="name">Name:</label>
-        <input type="text" v-model="name" id="name" required />
+        <label for="firstName">First Name:</label>
+        <input type="text" v-model="firstName" id="firstName" required />
+      </div>
+
+      <div class="input-group">
+        <label for="secondName">Second Name:</label>
+        <input type="text" v-model="secondName" id="secondName" required />
       </div>
 
       <div class="input-group">
@@ -30,7 +35,8 @@ export default {
   name: "WelcomePage",
   data() {
     return {
-      name: "",
+      firstName: "",
+      secondName: "",
       form: "",
       house: "",
     };
@@ -41,9 +47,15 @@ export default {
   },
   methods: {
     submitForm() {
-      this.userStore.setUserDetails(this.name, this.form, this.house);
-      this.userStore.resetScore();
-      this.$router.push({ name: "QuizPage" });
+      // Ensure user details are correctly set
+      this.userStore.setUserDetails(
+        this.firstName,
+        this.secondName,
+        this.form,
+        this.house
+      );
+      this.userStore.resetScore(); // Reset score before starting quiz
+      this.$router.push({ name: "QuizPage" }); // Navigate to QuizPage
     },
   },
 };
