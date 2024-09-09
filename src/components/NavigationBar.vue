@@ -38,7 +38,7 @@ export default {
 
 .navbar-content {
   width: 90%;
-  max-width: 1250px;
+  max-width: 1000px;
   display: flex;
   justify-content: space-between;
   align-items: center;

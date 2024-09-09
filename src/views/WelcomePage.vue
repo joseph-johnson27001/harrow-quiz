@@ -1,6 +1,6 @@
 <template>
   <div class="welcome-page">
-    <h1>Counselling Quiz</h1>
+    <h1>School Counselling Quiz</h1>
 
     <form @submit.prevent="submitForm">
       <div class="input-group">
@@ -74,7 +74,6 @@ export default {
 }
 
 h1 {
-  font-family: "Bembo Std", Sans-serif;
   color: #2c3e50;
   font-size: 24px;
   margin-bottom: 20px;
