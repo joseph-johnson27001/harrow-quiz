@@ -48,9 +48,9 @@ export default {
 #main-container {
   width: 90%;
   max-width: 1250px;
-  background-color: white;
+  /* background-color: white; */
   height: 100vh;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  /* border: 1px solid #ccc;
+  border-radius: 5px; */
 }
 </style>

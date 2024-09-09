@@ -5,8 +5,7 @@
         <span v-if="userStore.name">{{ userStore.name }}</span>
       </div>
       <div class="navbar-right">
-        <span v-if="userStore.score"> Score:{{ userStore.score }}></span>
-        <span v-else>Harrow Quiz </span>
+        <span>Harrow Quiz </span>
       </div>
     </div>
   </nav>
