@@ -42,6 +42,7 @@ export default {
 #body {
   display: flex;
   justify-content: center;
+  margin-top: 10px;
 }
 
 #main-container {
@@ -49,8 +50,7 @@ export default {
   max-width: 1250px;
   background-color: white;
   height: 100vh;
-  border-left: 1px solid #ccc;
-  border-right: 1px solid #ccc;
+  border: 1px solid #ccc;
   border-radius: 5px;
 }
 </style>
