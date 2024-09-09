@@ -1,14 +1,23 @@
 <template>
   <div id="app">
-    <div id="main-container">
-      <main></main>
+    <NavigationBar />
+    <div id="body">
+      <div id="main-container">
+        <router-view />
+        <!-- This will display the current routed component -->
+      </div>
     </div>
   </div>
 </template>
 
 <script>
+import NavigationBar from "./components/NavigationBar.vue";
+
 export default {
   name: "App",
+  components: {
+    NavigationBar,
+  },
 };
 </script>
 
@@ -28,6 +37,9 @@ export default {
   background-color: #f5f5f5;
   height: 100%;
   width: 100%;
+}
+
+#body {
   display: flex;
   justify-content: center;
 }
