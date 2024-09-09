@@ -1,10 +1,17 @@
 <template>
   <nav id="navbar">
-    <div class="navbar-content">
-      <div class="navbar-right">
-        <span>Harrow Counselling</span>
-      </div>
+    <div
+      class="navbar-content"
+      :class="{ 'centered-content': !userStore.firstName }"
+    >
       <div class="navbar-left">
+        <img
+          src="@/assets/Harrow-School.png"
+          alt="Harrow School Logo"
+          class="logo"
+        />
+      </div>
+      <div class="navbar-right">
         <span v-if="userStore.firstName"
           >{{ userStore.firstName }} {{ userStore.secondName }}</span
         >
@@ -32,12 +39,11 @@ export default {
   color: white;
   display: flex;
   justify-content: center;
-  padding: 20px 20px;
+  padding: 10px 20px;
   border-bottom: 1px solid white;
 }
 
 .navbar-content {
-  min-height: 20px;
   width: 90%;
   max-width: 800px;
   display: flex;
@@ -45,8 +51,23 @@ export default {
   align-items: center;
 }
 
+.centered-content {
+  justify-content: center; /* Center content when no name is available */
+}
+
+.logo {
+  height: 50px;
+  width: 50px;
+  margin-right: 10px;
+}
+
 .navbar-left,
 .navbar-right {
   font-size: 16px;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
 }
 </style>
