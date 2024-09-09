@@ -15,12 +15,22 @@
 
       <div class="input-group">
         <label for="form">Form:</label>
-        <input type="text" v-model="form" id="form" required />
+        <select v-model="form" id="form" required>
+          <option value="" disabled>Select your form</option>
+          <option v-for="option in formOptions" :key="option" :value="option">
+            {{ option }}
+          </option>
+        </select>
       </div>
 
       <div class="input-group">
         <label for="house">House:</label>
-        <input type="text" v-model="house" id="house" required />
+        <select v-model="house" id="house" required>
+          <option value="" disabled>Select your house</option>
+          <option v-for="option in houseOptions" :key="option" :value="option">
+            {{ option }}
+          </option>
+        </select>
       </div>
 
       <button type="submit">Start Quiz</button>
@@ -39,6 +49,24 @@ export default {
       secondName: "",
       form: "",
       house: "",
+      formOptions: [
+        "Year 6",
+        "Year 7",
+        "Year 8",
+        "Year 9",
+        "Year 10",
+        "Year 11",
+        "Year 12",
+        "Year 13",
+      ],
+      houseOptions: [
+        "Byron",
+        "Churchill",
+        "Keller",
+        "Nehru",
+        "Sonakul",
+        "Suriyothai",
+      ],
     };
   },
   setup() {
@@ -62,6 +90,10 @@ export default {
 </script>
 
 <style scoped>
+* {
+  font-family: "Assistant", sans-serif !important;
+}
+
 .welcome-page {
   padding: 20px;
   max-width: 400px;
@@ -91,7 +123,8 @@ label {
   font-weight: 500;
 }
 
-input {
+input,
+select {
   width: 100%;
   padding: 10px;
   font-size: 16px;
@@ -101,7 +134,8 @@ input {
   transition: border-color 0.3s ease;
 }
 
-input:focus {
+input:focus,
+select:focus {
   outline: none;
   border-color: #1e90ff;
   box-shadow: 0 0 5px rgba(30, 144, 255, 0.5);
@@ -138,6 +172,7 @@ button:active {
   }
 
   input,
+  select,
   button {
     font-size: 14px;
   }

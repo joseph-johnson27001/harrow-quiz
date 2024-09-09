@@ -1,13 +1,13 @@
 <template>
   <nav id="navbar">
     <div class="navbar-content">
+      <div class="navbar-right">
+        <span>Harrow Counselling</span>
+      </div>
       <div class="navbar-left">
         <span v-if="userStore.firstName"
           >{{ userStore.firstName }} {{ userStore.secondName }}</span
         >
-      </div>
-      <div class="navbar-right">
-        <span>Harrow Counselling</span>
       </div>
     </div>
   </nav>
@@ -37,8 +37,9 @@ export default {
 }
 
 .navbar-content {
+  min-height: 20px;
   width: 90%;
-  max-width: 1000px;
+  max-width: 800px;
   display: flex;
   justify-content: space-between;
   align-items: center;
