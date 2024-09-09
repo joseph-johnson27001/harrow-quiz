@@ -1,6 +1,6 @@
 <template>
   <div class="welcome-page">
-    <h1>Super Fun Happy Quiz</h1>
+    <h1>Counselling Quiz</h1>
 
     <form @submit.prevent="submitForm">
       <div class="input-group">
@@ -74,6 +74,7 @@ export default {
 }
 
 h1 {
+  font-family: "Bembo Std", Sans-serif;
   color: #2c3e50;
   font-size: 24px;
   margin-bottom: 20px;
@@ -111,7 +112,7 @@ button {
   width: 100%;
   padding: 12px;
   font-size: 16px;
-  background-color: #1e90ff;
+  background-color: #89764b;
   color: white;
   border: none;
   border-radius: 4px;
@@ -119,13 +120,13 @@ button {
   transition: background-color 0.3s ease;
 }
 
-button:hover {
+/* button:hover {
   background-color: #4682b4;
 }
 
 button:active {
   background-color: #1c75d8;
-}
+} */
 
 @media (max-width: 500px) {
   .welcome-page {

@@ -2,10 +2,12 @@
   <nav id="navbar">
     <div class="navbar-content">
       <div class="navbar-left">
-        <span>Harrow Quiz </span>
+        <span v-if="userStore.firstName"
+          >{{ userStore.firstName }} {{ userStore.secondName }}</span
+        >
       </div>
       <div class="navbar-right">
-        <span v-if="userStore.firstName">{{ userStore.firstName }}</span>
+        <span>Harrow Counselling</span>
       </div>
     </div>
   </nav>
@@ -26,7 +28,7 @@ export default {
 <style scoped>
 #navbar {
   width: 100%;
-  background-color: #4169e1;
+  background-color: #001744;
   color: white;
   display: flex;
   justify-content: center;
