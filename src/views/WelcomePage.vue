@@ -1,6 +1,6 @@
 <template>
   <div class="welcome-page">
-    <h1>Welcome to the Quiz App!</h1>
+    <h1>Super Fun Happy Quiz</h1>
 
     <form @submit.prevent="submitForm">
       <div class="input-group">
