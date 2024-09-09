@@ -42,11 +42,13 @@ export default {
   methods: {
     submitForm() {
       this.userStore.setUserDetails(this.name, this.form, this.house);
+      this.userStore.resetScore();
       this.$router.push({ name: "QuizPage" });
     },
   },
 };
 </script>
+
 <style scoped>
 .welcome-page {
   padding: 20px;

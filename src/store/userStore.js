@@ -19,5 +19,14 @@ export const useUserStore = defineStore("userStore", {
     resetScore() {
       this.score = 0;
     },
+    resetUserDetails() {
+      this.name = "";
+      this.form = "";
+      this.house = "";
+    },
+    resetAll() {
+      this.resetScore();
+      this.resetUserDetails();
+    },
   },
 });
