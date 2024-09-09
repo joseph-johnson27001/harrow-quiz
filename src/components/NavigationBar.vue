@@ -32,7 +32,7 @@ export default {
   color: white;
   display: flex;
   justify-content: center;
-  padding: 20px 0;
+  padding: 20px 20px;
   border-bottom: 1px solid white;
 }
 
