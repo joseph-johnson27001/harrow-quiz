@@ -1,15 +1,26 @@
 <template>
   <nav id="navbar">
     <div class="navbar-content">
-      <div class="navbar-left">[Name]</div>
-      <div class="navbar-right">Score:</div>
+      <div class="navbar-left">
+        <span v-if="userStore.name">{{ userStore.name }}</span>
+      </div>
+      <div class="navbar-right">
+        <span v-if="userStore.score"> Score:{{ userStore.score }}></span>
+        <span v-else>Harrow Quiz </span>
+      </div>
     </div>
   </nav>
 </template>
 
 <script>
+import { useUserStore } from "../store/userStore";
+
 export default {
   name: "NavigationBar",
+  setup() {
+    const userStore = useUserStore();
+    return { userStore };
+  },
 };
 </script>
 
