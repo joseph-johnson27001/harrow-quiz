@@ -39,7 +39,7 @@ export default {
   color: white;
   display: flex;
   justify-content: center;
-  padding: 10px 20px;
+  padding: 15px 10px 10px 10px;
   border-bottom: 1px solid white;
 }
 
